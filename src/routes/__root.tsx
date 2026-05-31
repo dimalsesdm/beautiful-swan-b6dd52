@@ -28,6 +28,7 @@ const navLinks = [
   { to: '/about', label: 'About' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/projects', label: 'Work' },
+  { to: '/weather', label: 'Weather' },
   { to: '/contact', label: 'Contact' },
 ]
 

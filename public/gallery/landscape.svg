@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1a2b"/>
+      <stop offset="30%" stop-color="#1a3350"/>
+      <stop offset="60%" stop-color="#2d5986"/>
+      <stop offset="80%" stop-color="#4a7ab5"/>
+      <stop offset="100%" stop-color="#6699CC"/>
+    </linearGradient>
+    <linearGradient id="fog-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8D4E8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#E8F0F5" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="water-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d4a6b"/>
+      <stop offset="50%" stop-color="#1a3350"/>
+      <stop offset="100%" stop-color="#0d1a2b"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2d1a"/>
+      <stop offset="100%" stop-color="#0d1a0d"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1a0d"/>
+      <stop offset="100%" stop-color="#060d06"/>
+    </linearGradient>
+    <filter id="gblur">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="liteblur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="900" height="600" fill="url(#sky-grad)"/>
+
+  <!-- Stars (subtle) -->
+  <circle cx="100" cy="40" r="1" fill="white" opacity="0.6"/>
+  <circle cx="200" cy="25" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="350" cy="55" r="1" fill="white" opacity="0.4"/>
+  <circle cx="500" cy="30" r="1" fill="white" opacity="0.7"/>
+  <circle cx="650" cy="50" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="800" cy="35" r="1" fill="white" opacity="0.6"/>
+  <circle cx="750" cy="60" r="1" fill="white" opacity="0.4"/>
+  <circle cx="150" cy="70" r="1" fill="white" opacity="0.3"/>
+  <circle cx="420" cy="20" r="1" fill="white" opacity="0.8"/>
+
+  <!-- Distant fog layer -->
+  <ellipse cx="450" cy="300" rx="500" ry="80" fill="url(#fog-grad)" filter="url(#gblur)"/>
+
+  <!-- Far hills (very muted, foggy) -->
+  <path d="M 0 330 Q 100 270 200 285 Q 300 300 400 270 Q 500 240 600 260 Q 700 275 800 255 Q 850 245 900 260 L 900 400 L 0 400 Z" fill="#1a2d1a" opacity="0.5" filter="url(#liteblur)"/>
+
+  <!-- Mid hills -->
+  <path d="M 0 360 Q 80 310 160 330 Q 240 350 320 325 Q 420 295 500 315 Q 580 335 660 310 Q 740 285 820 305 Q 870 320 900 310 L 900 450 L 0 450 Z" fill="url(#hill1)" opacity="0.7"/>
+
+  <!-- Fog over hills -->
+  <rect x="0" y="290" width="900" height="80" fill="#B8D4E8" opacity="0.15" filter="url(#gblur)"/>
+
+  <!-- Close hills / headlands -->
+  <path d="M 0 400 Q 150 340 280 380 Q 380 410 450 380 Q 520 350 600 390 Q 700 425 800 395 Q 860 375 900 390 L 900 500 L 0 500 Z" fill="url(#hill2)"/>
+
+  <!-- Water / bay -->
+  <rect x="0" y="440" width="900" height="160" fill="url(#water-grad)"/>
+
+  <!-- Water reflections -->
+  <rect x="0" y="455" width="900" height="2" fill="#4a7ab5" opacity="0.3"/>
+  <rect x="100" y="475" width="700" height="1" fill="#4a7ab5" opacity="0.2"/>
+  <rect x="200" y="500" width="500" height="1" fill="#4a7ab5" opacity="0.15"/>
+  <rect x="50" y="520" width="800" height="1" fill="#2d5986" opacity="0.2"/>
+
+  <!-- Fog wisps on water -->
+  <ellipse cx="200" cy="460" rx="120" ry="20" fill="white" opacity="0.06" filter="url(#gblur)"/>
+  <ellipse cx="650" cy="450" rx="150" ry="18" fill="white" opacity="0.05" filter="url(#gblur)"/>
+
+  <!-- Foreground land mass (dark) -->
+  <path d="M 0 500 Q 50 480 120 490 L 120 600 L 0 600 Z" fill="#060d06"/>
+  <path d="M 750 485 Q 820 470 900 480 L 900 600 L 750 600 Z" fill="#060d06"/>
+
+  <!-- Morning light glow on horizon -->
+  <ellipse cx="450" cy="360" rx="300" ry="40" fill="#6699CC" opacity="0.1" filter="url(#gblur)"/>
+</svg>

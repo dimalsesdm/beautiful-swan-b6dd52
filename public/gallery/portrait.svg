@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2d1810"/>
+      <stop offset="100%" stop-color="#0a0706"/>
+    </radialGradient>
+    <radialGradient id="skin-light" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#D4853C" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#8B4513" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="face-glow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#F0C090" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#D4853C" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="vsoft">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="sharp">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- Dark warm background -->
+  <rect width="600" height="800" fill="url(#bg-glow)"/>
+
+  <!-- Very subtle warm ambient -->
+  <ellipse cx="300" cy="300" rx="250" ry="300" fill="#8B4513" opacity="0.08" filter="url(#vsoft)"/>
+
+  <!-- Light source (side/top light) -->
+  <ellipse cx="200" cy="150" rx="180" ry="200" fill="#FFD700" opacity="0.05" filter="url(#vsoft)"/>
+
+  <!-- Abstract face/form - deeply blurred, impressionistic -->
+  <!-- Head form -->
+  <ellipse cx="300" cy="310" rx="130" ry="155" fill="#C68642" opacity="0.25" filter="url(#soft)"/>
+  <ellipse cx="300" cy="310" rx="110" ry="135" fill="#D4853C" opacity="0.2" filter="url(#soft)"/>
+
+  <!-- Highlight - lit side of face -->
+  <ellipse cx="250" cy="280" rx="90" ry="110" fill="#F0C090" opacity="0.25" filter="url(#soft)"/>
+  <ellipse cx="235" cy="265" rx="60" ry="80" fill="#FFF0DC" opacity="0.2" filter="url(#soft)"/>
+
+  <!-- Shadow side -->
+  <ellipse cx="360" cy="320" rx="80" ry="100" fill="#1a0e05" opacity="0.5" filter="url(#soft)"/>
+
+  <!-- Eye suggestion (abstract) -->
+  <ellipse cx="265" cy="285" rx="22" ry="14" fill="#0d0704" opacity="0.6" filter="url(#sharp)"/>
+  <ellipse cx="265" cy="285" rx="10" ry="8" fill="#1a0e05" opacity="0.8"/>
+  <ellipse cx="260" cy="282" rx="4" ry="4" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Lips suggestion -->
+  <path d="M 270 350 Q 300 360 330 350 Q 300 370 270 350" fill="#C0604A" opacity="0.4" filter="url(#sharp)"/>
+
+  <!-- Hair - top dark mass -->
+  <ellipse cx="300" cy="185" rx="135" ry="70" fill="#0a0502" opacity="0.9" filter="url(#soft)"/>
+  <ellipse cx="300" cy="155" rx="120" ry="55" fill="#060302" opacity="0.95"/>
+
+  <!-- Neck/shoulders -->
+  <rect x="255" y="450" width="90" height="80" rx="20" fill="#C68642" opacity="0.2" filter="url(#soft)"/>
+  <rect x="150" y="510" width="300" height="100" rx="30" fill="#1a0e05" opacity="0.6"/>
+
+  <!-- Atmospheric light from above -->
+  <ellipse cx="240" cy="220" rx="80" ry="60" fill="#FFF8E7" opacity="0.12" filter="url(#vsoft)"/>
+
+  <!-- Shadow falls on background -->
+  <ellipse cx="380" cy="400" rx="120" ry="150" fill="#060302" opacity="0.4" filter="url(#vsoft)"/>
+
+  <!-- Bottom vignette -->
+  <rect x="0" y="600" width="600" height="200" fill="#060302" opacity="0.7"/>
+  <!-- Side vignettes -->
+  <rect x="0" y="0" width="80" height="800" fill="#060302" opacity="0.5"/>
+  <rect x="520" y="0" width="80" height="800" fill="#060302" opacity="0.5"/>
+</svg>

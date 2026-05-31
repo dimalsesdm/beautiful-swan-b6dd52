@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+  <defs>
+    <radialGradient id="c1" cx="35%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="40%" stop-color="#D4853C"/>
+      <stop offset="100%" stop-color="#8B4513"/>
+    </radialGradient>
+    <radialGradient id="c2" cx="65%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#E8754A"/>
+      <stop offset="50%" stop-color="#C84B0F"/>
+      <stop offset="100%" stop-color="#5c2008"/>
+    </radialGradient>
+    <radialGradient id="c3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#F0C060" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#D4853C" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#3d1508" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="band1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="100%" stop-color="#D4853C"/>
+    </linearGradient>
+    <linearGradient id="band2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4853C"/>
+      <stop offset="100%" stop-color="#8B4513"/>
+    </linearGradient>
+    <linearGradient id="band3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B4513"/>
+      <stop offset="100%" stop-color="#4a2510"/>
+    </linearGradient>
+    <linearGradient id="band4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a2510"/>
+      <stop offset="100%" stop-color="#1a0a05"/>
+    </linearGradient>
+    <filter id="color-blur">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="subtle-blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background dark -->
+  <rect width="700" height="700" fill="#1a0a05"/>
+
+  <!-- Color bands - horizontal chromatic study -->
+  <rect x="0" y="0" width="700" height="175" fill="url(#band1)"/>
+  <rect x="0" y="175" width="700" height="175" fill="url(#band2)"/>
+  <rect x="0" y="350" width="700" height="175" fill="url(#band3)"/>
+  <rect x="0" y="525" width="700" height="175" fill="url(#band4)"/>
+
+  <!-- Radial light source overlay -->
+  <circle cx="280" cy="280" r="300" fill="url(#c1)" opacity="0.5" filter="url(#color-blur)"/>
+  <circle cx="450" cy="430" r="250" fill="url(#c2)" opacity="0.4" filter="url(#color-blur)"/>
+
+  <!-- Dark vignette frame -->
+  <rect width="700" height="700" fill="url(#c3)"/>
+
+  <!-- Horizontal dividers (subtle) -->
+  <rect x="0" y="174" width="700" height="2" fill="#FFE066" opacity="0.15"/>
+  <rect x="0" y="349" width="700" height="2" fill="#D4853C" opacity="0.12"/>
+  <rect x="0" y="524" width="700" height="2" fill="#8B4513" opacity="0.1"/>
+
+  <!-- Vertical accent lines -->
+  <rect x="80" y="0" width="1" height="700" fill="#FFE066" opacity="0.06"/>
+  <rect x="200" y="0" width="1" height="700" fill="#FFE066" opacity="0.04"/>
+  <rect x="350" y="0" width="2" height="700" fill="#FFD700" opacity="0.08"/>
+  <rect x="500" y="0" width="1" height="700" fill="#FFE066" opacity="0.04"/>
+  <rect x="620" y="0" width="1" height="700" fill="#FFE066" opacity="0.06"/>
+
+  <!-- Color chip squares (material samples feel) -->
+  <rect x="50" y="50" width="80" height="80" rx="4" fill="#FFE066" opacity="0.9"/>
+  <rect x="54" y="54" width="72" height="72" rx="3" fill="#FFD700"/>
+
+  <rect x="570" y="50" width="80" height="80" rx="4" fill="#E8C040" opacity="0.85"/>
+  <rect x="574" y="54" width="72" height="72" rx="3" fill="#D4B030"/>
+
+  <rect x="50" y="570" width="80" height="80" rx="4" fill="#3d1508" opacity="0.9"/>
+  <rect x="54" y="574" width="72" height="72" rx="3" fill="#2d1005"/>
+
+  <rect x="570" y="570" width="80" height="80" rx="4" fill="#D4853C" opacity="0.9"/>
+  <rect x="574" y="574" width="72" height="72" rx="3" fill="#C07830"/>
+
+  <!-- Central focal point -->
+  <circle cx="350" cy="350" r="120" fill="#0a0502" opacity="0.6"/>
+  <circle cx="350" cy="350" r="100" fill="#0a0502" opacity="0.4"/>
+  <circle cx="350" cy="350" r="60" fill="#0a0502" opacity="0.3"/>
+  <circle cx="350" cy="350" r="20" fill="#FFD700" opacity="0.15"/>
+
+  <!-- Subtle grid overlay -->
+  <line x1="0" y1="233" x2="700" y2="233" stroke="#FFD700" stroke-width="0.5" opacity="0.04"/>
+  <line x1="0" y1="467" x2="700" y2="467" stroke="#D4853C" stroke-width="0.5" opacity="0.04"/>
+  <line x1="233" y1="0" x2="233" y2="700" stroke="#FFD700" stroke-width="0.5" opacity="0.04"/>
+  <line x1="467" y1="0" x2="467" y2="700" stroke="#D4853C" stroke-width="0.5" opacity="0.04"/>
+</svg>
